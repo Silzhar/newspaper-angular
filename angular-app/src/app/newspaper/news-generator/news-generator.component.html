@@ -1,0 +1,39 @@
+<h2>Generador de noticias:</h2>
+
+<form novalidate (ngSubmit)="onUserTryToSubmit()" [formGroup]="createArticleFormGroup">
+    <fieldset>
+        <label for="title">Título:</label>
+        <input type="text" id="title" formControlName="title">
+        <div class="error" *ngIf="!createArticleFormGroup.get('title').valid && (createArticleFormGroup.get('title').dirty || submitted)">
+            Error en el campo
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <label for="author">Autor:</label>
+        <input type="text" id="author" formControlName="author">
+        <div class="error" *ngIf="!createArticleFormGroup.get('author').valid && (createArticleFormGroup.get('author').dirty || submitted)">
+            Error en el campo
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <label for="url">URL:</label>
+        <input type="text" id="url" formControlName="url">
+        <div class="error" *ngIf="!createArticleFormGroup.get('url').valid && (createArticleFormGroup.get('url').dirty || submitted)">
+            Error en el campo
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <label for="text">Texto:</label>
+        <input type="text" id="text" formControlName="text">
+        <div class="error" *ngIf="!createArticleFormGroup.get('text').valid && (createArticleFormGroup.get('text').dirty || submitted)">
+            Error en el campo
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <input type="submit" title="Guardar">
+    </fieldset>
+</form>

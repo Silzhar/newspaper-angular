@@ -1,0 +1,10 @@
+<h1>Bienvenidos al periódico:</h1>
+
+<div class="row">
+    <div class="col">
+        <app-news-viewer [articles]="articles"></app-news-viewer>
+    </div>
+    <div class="col">
+        <app-news-generator (articleCreated)="saveNewArticle($event)"></app-news-generator>
+    </div>
+</div>

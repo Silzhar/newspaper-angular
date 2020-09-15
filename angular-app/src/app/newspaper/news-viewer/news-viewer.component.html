@@ -1,0 +1,9 @@
+<h2>Listado de noticias:</h2>
+
+<article *ngFor="let article of articles">
+    <h3>Título :{{ article.title  }}</h3>
+    <p>ID: {{ article.id }}</p>
+    <p>Autor: {{ article.author }}</p>
+    <p>URL: {{ article.url }}</p>
+    <p>Texto: {{ article.text }}</p>
+</article>
